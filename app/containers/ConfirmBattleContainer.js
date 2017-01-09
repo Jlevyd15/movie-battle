@@ -1,6 +1,7 @@
 var React = require('react');
 var ConfirmBattle = require('../components/ConfirmBattle');
 var githubHelpers = require('../utils/githubHelpers');
+var Loading = require('../components/Loading');
 
 var ConfrimBattleContainer = React.createClass({
 	contextTypes: {
@@ -24,6 +25,7 @@ var ConfrimBattleContainer = React.createClass({
 		}.bind(this))
 	},
 	handleInitiateBattle: function () {
+		console.log(this.props)
 		this.context.router.push({
 			pathname: '/results',
 			state: {

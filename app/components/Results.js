@@ -5,6 +5,7 @@ var Player = require('./Player');
 var PlayerWrapper = require('./PlayerWrapper');
 var Link = require('react-router').Link;
 var MainContainer = require('./MainContainer');
+var Loading = require('./Loading');
 
 
 function puke(object) {
@@ -27,9 +28,10 @@ function StartOver() {
 }
 
 var Results = function (props) {
+	console.log(props)
 	if(props.isLoading === true) {
 		return (
-			<p>Loading...</p>
+			<Loading />
 		)
 	}
 
